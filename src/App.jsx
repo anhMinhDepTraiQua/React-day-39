@@ -1,14 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TodoApp from "./pages/TodoApp";
 function App() {
   return (
-    <div>
-      <BrowserRouter basename="React-day-39">
-        <Routes>
-          <Route path="/" element={<h1>Home Page</h1>} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  )
+    <BrowserRouter >
+      <Routes>
+<Route path="/" element={<TodoApp />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
